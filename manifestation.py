@@ -194,6 +194,33 @@ class Bot:
                     "Page of Pentacles { http://i.imgur.com/xxPXOML.jpg }"
                  ]
 
+    # Album: https://imgur.com/a/W3cmH
+    RUNES = [       "Fehu { https://i.imgur.com/SjPESEW.gif }",
+                    "Uruz { https://i.imgur.com/KBSvslk.gif }",
+                    "Thurisaz { https://i.imgur.com/AFUYbye.gif }",
+                    "Ansuz { https://i.imgur.com/Ps05ytE.gif }",
+                    "Raidho { https://i.imgur.com/x5kG79B.gif }",
+                    "Kenaz { https://i.imgur.com/wW5SpF0.gif }",
+                    "Gebo { https://i.imgur.com/ELL6KSL.gif }",
+                    "Wunjo { https://i.imgur.com/c8c5M8M.gif }",
+                    "Hagalaz { https://i.imgur.com/Ni8tUul.gif }",
+                    "Nauthiz { https://i.imgur.com/hUQGqft.gif }",
+                    "Isa { https://i.imgur.com/NlDSgTT.gif }",
+                    "Jera { https://i.imgur.com/lE2QZAN.gif }",
+                    "Eihwaz { https://i.imgur.com/vGOO917.gif }",
+                    "Perthro { https://i.imgur.com/NCWTCWT.gif }",
+                    "Algiz { https://i.imgur.com/e6yy8EK.gif }",
+                    "Sowilo { https://i.imgur.com/0cW16RB.gif }",
+                    "Tiwaz { https://i.imgur.com/XD91cMh.gif }",
+                    "Berkano { https://i.imgur.com/emH7iXn.gif }",
+                    "Ehwaz { https://i.imgur.com/flRhgtH.gif }",
+                    "Mannaz { https://i.imgur.com/KQXLM3A.gif }",
+                    "Laguz { https://i.imgur.com/EUdAkUA.gif }",
+                    "Ingwaz { https://i.imgur.com/D9jOPSz.gif }",
+                    "Dagaz { https://i.imgur.com/DwbJt9c.gif }",
+                    "Othala { https://i.imgur.com/Z2yyPkW.gif }"
+                 ]
+
     def __init__(self, host='eu.sorcery.net', port=9000):
         self.host = host
         self.port = port
@@ -258,6 +285,8 @@ class Bot:
                     card = random.choice(self.quotes)
                 elif "rw" in inputString.lower():
                     card = random.choice(self.RW_DECK)
+                elif "rune" in inputString.lower():
+                    card = random.choice(self.RUNES)
                 else:
                     card = random.choice(self.THOTH_DECK)
                 self.sendMsg(channel, prefix[:prefix.index("!")]+": "+card)
