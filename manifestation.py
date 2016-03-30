@@ -95,9 +95,9 @@ class Bot:
                 if "quote" in inputString.lower():
                     card = random.choice(self.quotes)
                 elif "rw" in inputString.lower():
-                    card = random.choice(self.RW_DECK)
+                    card = random.choice(RW_DECK)
                 elif "rune" in inputString.lower():
-                    card = random.choice(self.RUNES)
+                    card = random.choice(RUNES)
                 elif "rune spread" in inputString.lower():
                     card = ' / '.join(random.sample(RUNES, 3))
                 elif "rw spread" in inputString.lower():
@@ -105,7 +105,7 @@ class Bot:
                 elif "spread" in inputString.lower():
                     card = ' / '.join(random.sample(THOTH_DECK, 3))
                 else:
-                    card = random.choice(self.THOTH_DECK)
+                    card = random.choice(THOTH_DECK)
                 self.sendMsg(channel, prefix[:prefix.index("!")]+": "+card)
 
 bot = Bot()
