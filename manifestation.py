@@ -1,4 +1,5 @@
 import sys, os, time, random, math, socket, string, pickle
+from decks import RW_DECK, THOTH_DECK, RUNES
 
 with open("corpus", "w") as f:
     f.write(str(os.getpid()))
