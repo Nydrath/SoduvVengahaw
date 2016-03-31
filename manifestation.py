@@ -97,12 +97,12 @@ class Bot:
                     card = random.choice(self.quotes)
                 elif "rw" in inputString.lower():
                     card = random.choice(RW_DECK)
+                    if "spread" in inputString.lower():
+                        card = ' / '.join(random.sample(RW_DECK, 3)) 
                 elif "rune" in inputString.lower():
                     card = random.choice(RUNES)
-                elif "rune spread" in inputString.lower():
-                    card = ' / '.join(random.sample(RUNES, 3))
-                elif "rw spread" in inputString.lower():
-                    card = ' / '.join(random.sample(RW_DECK, 3))
+                    if "spread" in inputString.lower():
+                        card = ' / '.join(random.sample(RUNES, 3))
                 elif "spread" in inputString.lower():
                     card = ' / '.join(random.sample(THOTH_DECK, 3))
                 else:
