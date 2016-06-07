@@ -14,8 +14,6 @@ import decks
 with open("corpus", "w") as f:
     f.write(str(os.getpid()))
 
-import soduvvengahaw.spark
-
 def parsemsg(s):
     # Stolen from Twisted. Parses a message to it's prefix, command and arguments.
     prefix = ''
