@@ -122,6 +122,11 @@ class Bot:
                                 card = "Throwing runes.."
                             else:
                                 card = "Already creating a spread. Please wait."
+                    elif "morgan" in inputString.lower():
+                        if "spread" in inputString.lower():
+                            card = ' / '.join(random.sample(decks.MORGAN, 3))
+                        else:
+                            card = random.choice(decks.MORGAN)
                     elif "spread" in inputString.lower():
                         card = ' / '.join(random.sample(decks.THOTH, 3))
                     else:
